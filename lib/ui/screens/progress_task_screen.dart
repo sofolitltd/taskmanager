@@ -8,21 +8,21 @@ import '../widgets/screen_background_widget.dart';
 import '../widgets/status_change_bottom_widget.dart';
 import '../widgets/task_list_item_widget.dart';
 
-class CompletedTaskScreen extends StatefulWidget {
-  const CompletedTaskScreen({Key? key}) : super(key: key);
+class ProgressTaskScreen extends StatefulWidget {
+  const ProgressTaskScreen({Key? key}) : super(key: key);
 
   @override
-  State<CompletedTaskScreen> createState() => _CompletedTaskScreenState();
+  State<ProgressTaskScreen> createState() => _ProgressTaskScreenState();
 }
 
-class _CompletedTaskScreenState extends State<CompletedTaskScreen> {
+class _ProgressTaskScreenState extends State<ProgressTaskScreen> {
   TaskModel taskModel = TaskModel();
   bool _inProgress = false;
 
   @override
   void initState() {
     super.initState();
-    getaAllTasks(url: Urls.completedTaskUrl);
+    getaAllTasks(url: Urls.progressTaskUrl);
   }
 
   Future getaAllTasks({required String url}) async {
@@ -45,7 +45,7 @@ class _CompletedTaskScreenState extends State<CompletedTaskScreen> {
             ? const Center(child: CircularProgressIndicator())
             : RefreshIndicator(
                 onRefresh: () async {
-                  getaAllTasks(url: Urls.completedTaskUrl);
+                  getaAllTasks(url: Urls.progressTaskUrl);
                 },
                 child: taskModel.data!.isEmpty
                     ? const Center(child: Text('No task found'))
@@ -64,19 +64,19 @@ class _CompletedTaskScreenState extends State<CompletedTaskScreen> {
                                 taskModel.data?[index].description ?? 'unknown',
                             date:
                                 taskModel.data?[index].createdDate ?? 'unknown',
-                            type: 'Completed',
-                            color: ColorStyles.kGreenColor,
+                            type: 'Progress',
+                            color: ColorStyles.kPurpleColor,
                             onDeletePress: () {
                               NetworkUtils.deleteTask(
                                   taskModel.data?[index].sId ?? '');
-                              getaAllTasks(url: Urls.completedTaskUrl);
+                              getaAllTasks(url: Urls.progressTaskUrl);
                             },
                             onEditPress: () {
                               showChangeTaskStatus(
-                                task: 'Completed',
+                                task: 'Progress',
                                 taskId: taskModel.data?[index].sId ?? '',
                                 onTaskChanged: () {
-                                  getaAllTasks(url: Urls.completedTaskUrl);
+                                  getaAllTasks(url: Urls.progressTaskUrl);
                                 },
                               );
                             },

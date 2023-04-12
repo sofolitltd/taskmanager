@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task_manager/ui/widgets/screen_background_widget.dart';
+import 'package:task_manager/utils/color_styles.dart';
 
 import '../../data/auth_utils.dart';
 import '../../data/network_utils.dart';
@@ -30,7 +31,7 @@ class _AddNewTaskScreenState extends State<AddNewTaskScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: userProfileWidget(context),
+      appBar: userProfileWidget(context, ColorStyles.kGreenColor),
 
       //
       body: BackgroundWidget(
@@ -83,7 +84,7 @@ class _AddNewTaskScreenState extends State<AddNewTaskScreen> {
 
                 //btn
                 AppElevatedButtonWidget(
-                  onTap: () async {
+                  onPressed: () async {
                     if (_formKey.currentState!.validate()) {
                       var status = 'New';
                       //

@@ -143,7 +143,7 @@ class _SignupScreenState extends State<SignupScreen> {
 
                     //btn
                     AppElevatedButtonWidget(
-                      onTap: () async {
+                      onPressed: () async {
                         if (_formKey.currentState!.validate()) {
                           setState(() {
                             _isLoading = true;

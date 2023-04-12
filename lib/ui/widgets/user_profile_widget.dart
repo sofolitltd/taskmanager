@@ -3,9 +3,9 @@ import 'package:task_manager/data/auth_utils.dart';
 import 'package:task_manager/ui/screens/login_screen.dart';
 import 'package:task_manager/ui/screens/update_profile_screen.dart';
 
-AppBar userProfileWidget(context) {
+AppBar userProfileWidget(context, bgColor) {
   return AppBar(
-    backgroundColor: Colors.green,
+    backgroundColor: bgColor,
     titleSpacing: 0,
     elevation: 0,
     automaticallyImplyLeading: false,
@@ -18,7 +18,9 @@ AppBar userProfileWidget(context) {
           ),
         );
       },
-      leading: const CircleAvatar(),
+      leading: const CircleAvatar(
+        backgroundColor: Colors.white,
+      ),
       title: Text(
         '${AuthUtils.firstName} ${AuthUtils.lastName}' ?? 'user',
         style: const TextStyle(color: Colors.white),

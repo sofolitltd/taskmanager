@@ -57,7 +57,7 @@ class ResetPasswordScreen extends StatelessWidget {
 
               //btn
               AppElevatedButtonWidget(
-                onTap: () {
+                onPressed: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(

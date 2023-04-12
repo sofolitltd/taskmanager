@@ -4,11 +4,11 @@ class AppElevatedButtonWidget extends StatelessWidget {
   const AppElevatedButtonWidget({
     Key? key,
     required this.child,
-    required this.onTap,
+    required this.onPressed,
   }) : super(key: key);
 
   final Widget child;
-  final VoidCallback onTap;
+  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class AppElevatedButtonWidget extends StatelessWidget {
           backgroundColor: Colors.green,
           minimumSize: const Size(64, 48),
         ),
-        onPressed: onTap,
+        onPressed: onPressed,
         child: child,
       ),
     );

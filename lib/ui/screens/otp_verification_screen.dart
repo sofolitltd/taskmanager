@@ -85,7 +85,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
 
               //btn
               AppElevatedButtonWidget(
-                onTap: () {
+                onPressed: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(

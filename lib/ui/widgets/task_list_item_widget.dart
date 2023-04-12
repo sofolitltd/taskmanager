@@ -89,18 +89,20 @@ class TaskListItemWidget extends StatelessWidget {
                   visualDensity: const VisualDensity(horizontal: -4),
                   onPressed: onEditPress,
                   icon: Icon(
-                    Icons.description_outlined,
-                    color: Colors.green.shade400,
+                    Icons.edit,
+                    color: Colors.grey.shade600,
                   ),
                 ),
+
+                const SizedBox(width: 8),
 
                 //
                 IconButton(
                   visualDensity: const VisualDensity(horizontal: -4),
                   onPressed: onDeletePress,
-                  icon: const Icon(
+                  icon: Icon(
                     Icons.delete,
-                    color: Colors.red,
+                    color: Colors.grey.shade600,
                   ),
                 ),
               ],

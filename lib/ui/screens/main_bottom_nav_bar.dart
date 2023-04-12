@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:task_manager/ui/screens/add_new_task_screen.dart';
-import 'package:task_manager/ui/screens/cancelled_task_screen.dart';
-import 'package:task_manager/ui/screens/completed_task_screen.dart';
-import 'package:task_manager/ui/screens/in_progress_task_screen.dart';
 
+import '/ui/screens/cancelled_task_screen.dart';
+import '/ui/screens/completed_task_screen.dart';
+import '/ui/screens/progress_task_screen.dart';
+import '/utils/color_styles.dart';
 import '../widgets/user_profile_widget.dart';
 import 'new_task_screen.dart';
 
@@ -18,7 +18,7 @@ List _screens = const [
   NewTaskScreen(),
   CompletedTaskScreen(),
   CancelledTaskScreen(),
-  InProgressTaskScreen(),
+  ProgressTaskScreen(),
 ];
 
 class _MainBottomNavBarState extends State<MainBottomNavBar> {
@@ -27,22 +27,12 @@ class _MainBottomNavBarState extends State<MainBottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: userProfileWidget(context),
+      appBar: userProfileWidget(
+        context,
+        selectedItemColor(_selectedScreen),
+      ),
       //
       body: _screens[_selectedScreen],
-
-      //
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const AddNewTaskScreen(),
-            ),
-          );
-        },
-        child: const Icon(Icons.add),
-      ),
 
       //
       bottomNavigationBar: BottomNavigationBar(
@@ -79,12 +69,12 @@ class _MainBottomNavBarState extends State<MainBottomNavBar> {
 // selected item color
 selectedItemColor(index) {
   if (index == 0) {
-    return Colors.blueAccent.shade100;
+    return ColorStyles.kBlueColor;
   } else if (index == 1) {
-    return Colors.green.shade400;
+    return ColorStyles.kGreenColor;
   } else if (index == 2) {
-    return Colors.redAccent.shade200;
+    return ColorStyles.kRedColor;
   } else {
-    return Colors.purple.shade300;
+    return ColorStyles.kPurpleColor;
   }
 }

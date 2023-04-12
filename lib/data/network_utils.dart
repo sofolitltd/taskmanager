@@ -4,9 +4,11 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:task_manager/data/auth_utils.dart';
+import 'package:task_manager/data/urls.dart';
 
 import '/main.dart';
 import '/ui/screens/login_screen.dart';
+import '../utils/snack_bar_message.dart';
 
 class NetworkUtils {
   /// get request
@@ -67,6 +69,24 @@ class NetworkUtils {
       }
     } catch (e) {
       log('error: $e', stackTrace: StackTrace.current);
+    }
+  }
+
+  // delete task by id
+  static deleteTask(taskId) async {
+    final response = await NetworkUtils.getMethod(
+      url: Urls.deleteTask(taskId),
+    );
+
+    //
+    if (response != null) {
+      showSnackBarMessage(
+        TaskManager.navigatorKey.currentContext!,
+        title: "Delete successful",
+      );
+    } else {
+      showSnackBarMessage(TaskManager.navigatorKey.currentContext!,
+          title: "Delete failed!", error: true);
     }
   }
 }

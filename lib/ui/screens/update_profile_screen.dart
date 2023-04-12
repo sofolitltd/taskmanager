@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task_manager/ui/widgets/screen_background_widget.dart';
+import 'package:task_manager/utils/color_styles.dart';
 
 import '../../utils/text_styles.dart';
 import '../widgets/app_elevated_button_widget.dart';
@@ -17,7 +18,7 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: userProfileWidget(context),
+      appBar: userProfileWidget(context, ColorStyles.kGreenColor),
 
       //
       body: BackgroundWidget(
@@ -120,7 +121,7 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
 
               //btn
               AppElevatedButtonWidget(
-                onTap: () {},
+                onPressed: () {},
                 child: const Icon(Icons.arrow_circle_right_outlined),
               ),
             ],

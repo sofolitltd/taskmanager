@@ -88,7 +88,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
                 //btn
                 AppElevatedButtonWidget(
-                  onTap: () async {
+                  onPressed: () async {
                     if (_formKey.currentState!.validate()) {
                       login();
                     }
