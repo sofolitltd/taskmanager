@@ -1,16 +1,8 @@
 # Task manager
+Creative task manager app
 
-creative task manager app
+## Welcome
+Task manager application builds with fluter and connects with rest API.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+UI provider by: Rabbil Hasan Rupom Vai.
+![Artboard – 1](https://github.com/sofolitltd/taskmanager/assets/102704714/d47963b1-0aa9-4008-a776-03b62cffc87e)
