@@ -11,7 +11,7 @@ This repository contains the source code for a Task Manager application, which c
 **User-friendly interface:** The mobile app provides a smooth and intuitive user experience, allowing users to easily navigate and interact with their tasks.
 
 # App UI 
-provider by: Rabbil Hasan Rupom Vai.
+provide by: Rabbil Hasan Rupom Vai.
 
 ![Artboard – 1](https://github.com/sofolitltd/taskmanager/assets/102704714/d47963b1-0aa9-4008-a776-03b62cffc87e)
 
