@@ -2,9 +2,9 @@
 This repository contains the source code for a Task Manager application, which consists of a Node. js-based REST API and a mobile app built with Flutter. The app allows users to manage their tasks efficiently and keep track of their progress.
 
 # Features
-**User authentication:** Users can create an account, log in, and manage their tasks securely.
-**Task management:** Users can create, read, update, and delete tasks. Each task can have a title, description, due date, priority, and status.
-**Task filtering:** Users can filter tasks based on different criteria, such as priority or status.
+**User authentication:** Users can create an account, log in, and manage their tasks securely. 
+**Task management:** Users can create, read, update, and delete tasks. Each task can have a title, description, due date, priority, and status. 
+**Task filtering:** Users can filter tasks based on different criteria, such as priority or status. 
 **User-friendly interface:** The mobile app provides a smooth and intuitive user experience, allowing users to easily navigate and interact with their tasks.
 
 # App UI 
